@@ -37,7 +37,7 @@ La base de datos está estructurada en torno a **Usuarios**, **Personajes**, **P
 
 1. Clonar el repositorio:
    ```bash
-   git clone [https://github.com/Antonio-Borrero/starwars-rest-api.git](https://github.com/Antonio-Borrero/starwars-rest-api.git)
+   git clone https://github.com/Antonio-Borrero/starwars-rest-api.git
    ```
 2. Instalar dependencias:
    ```bash

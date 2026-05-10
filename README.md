@@ -37,7 +37,7 @@ The database is structured around **Users**, **People**, **Planets**, and **Favo
 
 1. Clone the repository:
    ```bash
-   git clone [https://github.com/Antonio-Borrero/starwars-rest-api.git](https://github.com/Antonio-Borrero/starwars-rest-api.git)
+   git clone https://github.com/Antonio-Borrero/starwars-rest-api.git
    ```
 2. Install dependencies:
    ```bash

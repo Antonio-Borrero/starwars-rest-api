@@ -1,76 +1,62 @@
-<a href="https://www.breatheco.de"><img height="280" align="right" src="https://github.com/4GeeksAcademy/flask-rest-hello/blob/main/docs/assets/badge.png?raw=true"></a>
+Español| [English](README.md)
 
-# Plantilla de Flask para Desarrolladores Junior
+# Star Wars REST API (Flask)
 
-Crea API's con Flask en minutos, [📹 mira el tutorial en video](https://youtu.be/ORxQ-K3BzQA).
+[![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white)](https://www.python.org/)
+[![Flask](https://img.shields.io/badge/Flask-000000?logo=flask&logoColor=white)](https://flask.palletsprojects.com/)
+[![SQLAlchemy](https://img.shields.io/badge/SQLAlchemy-000000?logo=sqlalchemy&logoColor=white)](https://www.sqlalchemy.org/)
 
-- [Documentación extensa aquí](https://start.4geeksacademy.com).
-- Integrado con Pipenv para la gestión de paquetes.
-- Despliegue rápido a render.com o heroku con `$ pipenv run deploy`.
-- Uso de archivo `.env`.
-- Integración de SQLAlchemy para la abstracción de bases de datos.
+<br>
 
-## 1) Instalación
+> **⚠️ Nota:** Este es un proyecto de aprendizaje antiguo (legacy) desarrollado durante mi formación como Full Stack Developer en **4Geeks Academy**. Se centra en el diseño de APIs RESTful, modelado de bases de datos relacionales y lógica de servidor con Python.
 
-Esta plantilla se instala en unos segundos si la abres gratis con Codespaces (recomendado) o Gitpod.
-Omite estos pasos de instalación y salta al paso 2 si decides usar cualquiera de esos servicios.
+<br>
 
-> Importante: La plantilla está hecha para python 3.10 pero puedes cambiar la `python_version` en el Pipfile.
+Backend construido con **Python** y **Flask** para gestionar la base de datos de un blog de Star Wars. Maneja usuarios, personajes, planetas y un sistema de favoritos personalizado mediante una arquitectura relacional y el ORM SQLAlchemy.
 
-Los siguientes pasos se ejecutan automáticamente dentro de gitpod, si estás haciendo una instalación local debes hacerlos manualmente:
+<br>
 
-```sh
-pipenv install;
-psql -U root -c 'CREATE DATABASE example;'
-pipenv run init;
-pipenv run migrate;
-pipenv run upgrade;
-```
+## Implementación Backend
 
-> Nota: Los usuarios de Codespaces pueden conectarse a psql escribiendo: `psql -h localhost -U gitpod example`
+La base de datos está estructurada en torno a **Usuarios**, **Personajes**, **Planetas** y **Favoritos**, utilizando una lógica de relación Many-to-Many. A continuación, se muestra un fragmento de los modelos relacionales y la lógica de serialización:
 
-## 2) Cómo empezar a codificar
+![Backend Code Snippet](./assets/preview-code.png)
 
-Hay una API de ejemplo funcionando con una base de datos de ejemplo. Todo tu código de aplicación debe escribirse dentro de la carpeta `./src/`.
+<br>
 
-- src/main.py (aquí es donde debes codificar tus endpoints)
-- src/models.py (tus tablas de base de datos y lógica de serialización)
-- src/utils.py (algunas clases y funciones reutilizables)
-- src/admin.py (agrega tus modelos al administrador y gestiona tus datos fácilmente)
+## Tecnologías y Herramientas
 
-Para una explicación más detallada, busca el tutorial dentro de la carpeta `docs`.
+- Python
+- Flask 
+- Flask-SQLAlchemy 
+- Pipenv
 
-## Recuerda migrar cada vez que cambies tus modelos
+<br>
 
-Debes migrar y actualizar las migraciones por cada actualización que hagas a tus modelos:
+## Instalación
 
-```bash
-$ pipenv run migrate # (para hacer las migraciones)
-$ pipenv run upgrade  # (para actualizar tu base de datos con las migraciones)
-```
+1. Clonar el repositorio:
+   ```bash
+   git clone [https://github.com/Antonio-Borrero/starwars-rest-api.git](https://github.com/Antonio-Borrero/starwars-rest-api.git)
+   ```
+2. Instalar dependencias:
+   ```bash
+   pipenv install
+   ```
+3. Inicializar la Base de Datos y Migraciones:
+    ```bash
+   pipenv run init
+   pipenv run migrate
+   pipenv run upgrade
+   ```
+4. Ejecuta el servidor:
+   ```bash
+   pipenv run start
+   ```
 
-## Generar un diagrama de la base de datos
+<br>
 
-Si deseas visualizar la estructura de tu base de datos en forma de diagrama, puedes generarlo con el siguiente comando:
+## Resultados de Aprendizaje
 
-```bash
-$ pipenv run diagram
-```
-
-Este comando generará un archivo con el diagrama de la base de datos basado en los modelos definidos en `src/models.py`.
-
-## Verifica tu API en vivo
-
-1. Una vez que ejecutes el comando `pipenv run start` tu API comenzará a ejecutarse en vivo y podrás abrirla haciendo clic en la pestaña "ports" y luego haciendo clic en "open browser".
-
-> ✋ Si estás trabajando en una nube de codificación como [Codespaces](https://docs.github.com/en/codespaces/developing-in-codespaces/forwarding-ports-in-your-codespace#sharing-a-port) o [Gitpod](https://www.gitpod.io/docs/configure/workspaces/ports#configure-port-visibility) asegúrate de que tu puerto reenviado sea público.
-
-## Publica/Despliega tu sitio web!
-
-Esta plantilla está 100% lista para desplegarse con Render.com y Heroku en cuestión de minutos. Por favor lee la [documentación oficial al respecto](https://start.4geeksacademy.com/deploy).
-
-### Contribuidores
-
-Esta plantilla fue construida como parte del [Bootcamp de Codificación](https://4geeksacademy.com/us/coding-bootcamp) de 4Geeks Academy por [Alejandro Sanchez](https://twitter.com/alesanchezr) y muchos otros contribuidores. Descubre más sobre nuestro [Curso de Desarrollador Full Stack](https://4geeksacademy.com/us/coding-bootcamps/part-time-full-stack-developer), y [Bootcamp de Ciencia de Datos](https://4geeksacademy.com/us/coding-bootcamps/datascience-machine-learning).
-
-Puedes encontrar otras plantillas y recursos como este en la [página de github de la escuela](https://github.com/4geeksacademy/).
+- **Diseño de Bases de Datos Relacionales:** Creación de modelos de Entidad-Relación y manejo de relaciones (One-to-Many/Many-to-Many).
+- **Flujo de Trabajo Backend:** Aprendizaje del ciclo de actualización de modelos, migraciones y pruebas de endpoints con Postman.

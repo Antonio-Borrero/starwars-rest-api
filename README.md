@@ -16,7 +16,7 @@ A backend built with **Python** and **Flask** to manage a Star Wars blog databas
 
 <br>
 
-## 💻 Backend Implementation
+## Backend Implementation
 
 The database is structured around **Users**, **People**, **Planets**, and **Favorites**, utilizing a Many-to-Many relationship logic. Below is a snippet of the relational models and serialization logic:
 
